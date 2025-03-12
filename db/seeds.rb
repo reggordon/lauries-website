@@ -7,3 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+BlogPost.create!(
+  title: "First Dance Class Experience!",
+  content: "Discover the joy of movement with our fun and engaging dance classes for kids!"
+)

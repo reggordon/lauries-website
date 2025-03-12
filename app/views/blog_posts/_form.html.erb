@@ -1,0 +1,16 @@
+<div class="mb-4">
+  <%= form.label :title, "Title", class: "block font-bold" %>
+  <%= form.text_field :title, class: "w-full p-2 border rounded-lg" %>
+</div>
+
+<div class="mb-4">
+  <%= form.label :content, "Content", class: "block font-bold" %>
+  <%= form.text_area :content, class: "w-full p-2 border rounded-lg h-40" %>
+</div>
+
+<div class="mb-4">
+  <%= form.label :image, "Upload an Image", class: "block font-bold" %>
+  <%= form.file_field :image, class: "w-full p-2 border rounded-lg" %>
+</div>
+
+<%= form.submit "Save Blog Post", class: "bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" %>
