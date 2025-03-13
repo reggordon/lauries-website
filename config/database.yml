@@ -86,8 +86,16 @@ production:
 
 
 sandbox:
-  <<: *default
-  database: dance_academy_sandbox
-  username: postgres
-  password: password
-  host: localhost
+  primary:
+    <<: *default
+    database: dance_academy_sandbox
+    username: postgres
+    password: password
+    host: localhost
+  replica:
+    <<: *default
+    database: dance_academy_sandbox
+    username: postgres
+    password: password
+    host: localhost
+    replica: true
