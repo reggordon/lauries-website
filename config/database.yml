@@ -83,3 +83,11 @@ production:
   database: laurie_test_site_production
   username: laurie_test_site
   password: <%= ENV["LAURIE_TEST_SITE_DATABASE_PASSWORD"] %>
+
+
+sandbox:
+  <<: *default
+  database: dance_academy_sandbox
+  username: postgres
+  password: password
+  host: localhost
