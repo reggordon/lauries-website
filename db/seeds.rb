@@ -1,13 +1,17 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
-BlogPost.create!(
-  title: "First Dance Class Experience!",
-  content: "Discover the joy of movement with our fun and engaging dance classes for kids!"
+require "open-uri"
+
+BlogPost.destroy_all
+
+
+5.times do |i|
+post = BlogPost.create!(
+  title: "The Importance of Dance in Child Development",
+  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, turpis ut ultricies fermentum, eros orci pretium libero, vel malesuada ligula justo eget mauris. Integer dictum neque at risus vehicula."
 )
+
+# Attach a sample image
+image_url = "https://www.rollingstone.com/wp-content/uploads/2023/01/GettyImages-1204500373.jpg"
+post.image.attach(io: URI.open(image_url), filename: "dance.jpg", content_type: "image/jpg")
+end
+
+puts "Sample blog post created!"
