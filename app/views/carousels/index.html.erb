@@ -1,0 +1,16 @@
+<h1 class="text-4xl font-bold text-center mt-6">Welcome to Our Dance Academy</h1>
+
+<!-- Carousel Container -->
+<div class="relative w-full max-w-4xl mx-auto mt-6 overflow-hidden rounded-lg shadow-lg">
+  
+  <!-- Carousel Track (Animated with CSS) -->
+  <div class="carousel-track">
+    <% @carousel_images.each do |image| %>
+      <% if image.image.attached? %>
+        <div class="w-full flex-none shrink-0" style="width: 100%;">
+          <%= image_tag image.image, class: "w-full h-64 md:h-96 object-cover rounded-lg" %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

@@ -15,3 +15,13 @@ post.image.attach(io: URI.open(image_url), filename: "dance.jpg", content_type: 
 end
 
 puts "Sample blog post created!"
+
+CarouselImage.destroy_all
+
+3.times do |i|
+  image = CarouselImage.create!
+  image_path = Rails.root.join("app/assets/images/carousel/fugazi#{i + 1}.png")
+  image.image.attach(io: File.open(image_path), filename: "fugazi#{i + 1}.png", content_type: "image/jpeg")
+end
+
+puts "Seeded carousel images!"
