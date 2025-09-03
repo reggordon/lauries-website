@@ -121,12 +121,16 @@ GEM
     execjs (2.10.0)
     ffi (1.17.1-arm64-darwin)
     ffi (1.17.1-x86_64-darwin)
+    ffi (1.17.1-x86_64-linux-gnu)
     globalid (1.2.1)
       activesupport (>= 6.1)
     google-protobuf (4.30.1-arm64-darwin)
       bigdecimal
       rake (>= 13)
     google-protobuf (4.30.1-x86_64-darwin)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.30.1-x86_64-linux)
       bigdecimal
       rake (>= 13)
     i18n (1.14.7)
@@ -174,12 +178,16 @@ GEM
       racc (~> 1.4)
     nokogiri (1.18.3-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.18.3-x86_64-linux-gnu)
+      racc (~> 1.4)
     orm_adapter (0.5.0)
     parallel (1.26.3)
     parser (3.3.7.1)
       ast (~> 2.4.1)
       racc
-    pg (1.5.9)
+    pg (1.6.2-arm64-darwin)
+    pg (1.6.2-x86_64-darwin)
+    pg (1.6.2-x86_64-linux)
     popper_js (2.11.8)
     pp (0.6.2)
       prettyprint
@@ -285,6 +293,9 @@ GEM
       rubocop-rails (>= 2.30)
     ruby-progressbar (1.13.0)
     rubyzip (2.4.1)
+    sass-embedded (1.85.1)
+      google-protobuf (~> 4.29)
+      rake (>= 13)
     sass-embedded (1.85.1-arm64-darwin)
       google-protobuf (~> 4.29)
     sass-embedded (1.85.1-x86_64-darwin)
@@ -347,6 +358,7 @@ GEM
 PLATFORMS
   arm64-darwin
   x86_64-darwin
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
@@ -358,7 +370,7 @@ DEPENDENCIES
   devise (~> 4.9)
   importmap-rails
   jbuilder
-  pg (~> 1.1)
+  pg (~> 1.6)
   puma (>= 5.0)
   rails (~> 7.2.2, >= 7.2.2.1)
   rspec-rails
